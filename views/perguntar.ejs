@@ -1,0 +1,39 @@
+<%- include("./partials/header.ejs") %>
+<body>
+
+  <%- include("./partials/navbar.ejs") %>
+
+  <div class="container">
+    <div class="card" id="formulario-pergunta">
+      <div class="card-header">
+        <h3>Realizar pergunta</h3>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/salvarpergunta"> <!--Os dados n aparecem na URL,-->
+          <label>Título</label>
+          <input name="titulo" type="text" placeholder="Título" class="form-control">
+          <br> <label>Descrição</label>
+          <textarea name="descricao" placeholder="Descreva sua pergunta aqui" class="form-control"></textarea>
+          <br>
+          <button class="btn btn-dark">Perguntar</button>
+        </form>
+
+       <!--<br>
+        <br>
+
+        <form method="POST" action="/data">
+          <label>Name</label>
+          <input name="name" type="text" placeholder="Your name" class="form-control">
+          <br> <label>Age</label>
+          <input name="age" type="number" placeholder="Your age" class="form-control">
+          <br> <label>Bio</label>
+          <textarea name="bio" type="text" placeholder="Talk about you..." class="form-control"></textarea>
+
+          <button class="btn btn-primary">Send</button>
+        </form>-->
+      </div>
+    </div>
+  </div>
+</body>
+<%- include("./partials/footer.ejs") %>
+
